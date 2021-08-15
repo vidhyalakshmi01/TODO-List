@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO Application</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        header {
+            background-color: mediumturquoise;
+            height: 40px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            /* border-radius: 20px; */
+            font-family: sans-serif;
+            color: darkslategray;
+        }
+        
+        body {
+            background-color: lightgoldenrodyellow;
+        }
+
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <header>
+        <u>
+        <h2 align="center">PRIORITY BASED TODO APPLICATION</h2></u>
+    </header>
+    <div class="ct">
+        <br><br>
+        <label style="font-family: sans-serif;">Task: </label>
+        <input class="input " type="text " id="inp" placeholder="Task... " required>
+        <br>
+        <label style="font-family: sans-serif;">Priority: </label>
+        <select class="input" id="priority" required>
+                <option value="" disabled selected hidden> Choose a priority </option>
+                <option id="p1" value="High">High</option>
+                <option id="p2" value="Medium">Medium</option>
+                <option id="p3" value="Low">Low</option>
+            </select>
+        <br>
+        <br>
+        <span onclick="addItem()" class="add">Add</span>
+        <br>
+        <div class="filterList">
+            <label style="font-family: sans-serif;">Filter: </label>
+            <span class="filter" id="all" onclick="sortList( 'all')">ALL</span>
+            <span class="filter" id="Low" onclick="sortList( 'Low')">LOW</span>
+            <span class="filter" id="Medium" onclick="sortList( 'Medium')">MEDIUM</span>
+            <span class="filter" id="High" onclick="sortList( 'High')">HIGH</span>
+        </div>
+        <div class="info"><label style="font-family: sans-serif;">You have <span id="inf">0</span> tasks!</label></div>
+        <br><br>
+    </div>
+    <div class="scr">
+        <ul id="todos">
+            <li style="font-family: sans-serif;">Add a new Task! To complete the tasks just click on them. Edit them in the popup window. </li>
+        </ul>
+    </div>
+    <u>
+    <script src="script.js"></script>
+    <div class="footer">
+        <h4><p>THANK YOU!</p></h4>
+     </div>
+</body>
+
+</html>
